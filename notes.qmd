@@ -1,0 +1,14 @@
+---
+title: "Research Notes"
+description: "Methods, reading notes, and reproducible research workflows"
+---
+
+Short methodological notes on corpus-assisted discourse studies, cognitive approaches to discourse, and computational research practices will appear here.
+
+## Topics in preparation
+
+- **Building a parliamentary corpus from Hansard** — collection, cleaning, and metadata.
+- **From concordances to text worlds** — connecting corpus evidence with qualitative interpretation.
+- **Reproducible corpus workflows** — documenting analyses in Python and Jupyter.
+
+These are planned topics, not published notes. When a note is ready, create a new `.qmd` file in `notes/` and link to it here.

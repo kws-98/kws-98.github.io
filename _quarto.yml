@@ -1,0 +1,41 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Kamil Sikora"
+  description: "Language, Cognition & Discourse"
+  navbar:
+    background: light
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: research.qmd
+        text: Research
+      - href: publications.qmd
+        text: Publications
+      - href: projects.qmd
+        text: Projects
+      - href: notes.qmd
+        text: Research Notes
+      - href: cv.qmd
+        text: CV & Contact
+  page-footer:
+    left: "© Kamil Sikora"
+    right: "Built with Quarto · Hosted on GitHub Pages"
+  site-url: "https://kws-98.github.io/"
+  repo-url: "https://github.com/kws-98/kws-98.github.io"
+  repo-actions: [source, issue]
+  search: true
+
+format:
+  html:
+    theme: [cosmo, styles/custom.scss]
+    toc: false
+    link-external-newwindow: true
+    smooth-scroll: true
+
+execute:
+  freeze: auto

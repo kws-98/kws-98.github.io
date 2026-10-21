@@ -1,0 +1,17 @@
+---
+title: "Publications"
+---
+
+This page will list verified publications in reverse chronological order.
+
+## Journal articles
+
+*Add full bibliographic entries, DOI links, and permitted open-access versions here.*
+
+## Works in progress
+
+*Optional: include only manuscripts you are comfortable publicly identifying as in preparation.*
+
+## Citation formats
+
+Where available, each entry can link to a DOI, PDF, and BibTeX citation.

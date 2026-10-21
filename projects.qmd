@@ -1,0 +1,13 @@
+---
+title: "Projects & Tools"
+---
+
+This section documents reproducible research workflows and selected computational projects. Planned work is labelled separately from completed work.
+
+### [Parliamentary corpus analysis workflow](projects/corpus-workflow.qmd)
+
+**Status:** Concept / planned project.
+
+A possible future notebook-based workflow for collecting, preparing, and exploring parliamentary text.
+
+More projects will be added as they are completed and documented.

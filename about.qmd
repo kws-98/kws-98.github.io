@@ -1,0 +1,26 @@
+---
+title: "About"
+---
+
+I am a doctoral researcher in linguistics at the University of Wrocław (since October 2026), interested in how language structures interpretations of political and social reality. My work draws on cognitive linguistics, corpus-assisted discourse studies, and discourse analysis.
+
+## Research interests
+
+- Cognitive linguistics and Text World Theory
+- Corpus-assisted discourse studies
+- Political and legislative discourse
+- Conceptual metaphor and translation
+- Reproducible computational methods for linguistic research
+
+## Academic affiliation
+
+**Doctoral researcher**, University of Wrocław (since October 2026).
+
+## Education
+
+**MA in English Studies**, University of Wrocław (2026)  
+**BA in English Studies**, University of Wrocław (2024)
+
+## Research approach
+
+I combine corpus evidence with contextual interpretation. This site documents research questions, methods, publications, and selected practical projects.

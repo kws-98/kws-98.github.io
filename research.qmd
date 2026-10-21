@@ -1,0 +1,19 @@
+---
+title: "Research"
+---
+
+## Current research interests
+
+### [Threat and obligation in British legislative discourse](research/online-safety-act.qmd)
+
+Text World Theory, mental models, and corpus-assisted analysis of debates on the Online Safety Act.
+
+## Previous research
+
+### [Thatcher in Polish: Translation of Political Conceptual Metaphors](research/thatcher-metaphors.qmd)
+
+An MA research project examining political conceptual metaphor in English and Polish.
+
+### [Parliamentary tributes to Queen Elizabeth II](research/parliamentary-tributes.qmd)
+
+Corpus-assisted exploration of commemorative parliamentary discourse.

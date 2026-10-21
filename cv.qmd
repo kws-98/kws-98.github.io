@@ -1,0 +1,22 @@
+---
+title: "CV & Contact"
+---
+
+## Academic position
+
+**Doctoral researcher in linguistics**, University of Wrocław (since October 2026).
+
+## Curriculum vitae
+
+**Education:** MA in English Studies (2026), BA in English Studies (2024), University of Wrocław.
+
+A downloadable academic CV can be added here as `assets/academic-cv.pdf`.
+
+## Contact
+
+- **Email:** Add your professional contact email
+- **GitHub:** [kws-98](https://github.com/kws-98)
+- **ORCID:** Add your ORCID link
+- **Google Scholar:** Add your profile link, if available
+
+For privacy, consider using a dedicated professional email address.

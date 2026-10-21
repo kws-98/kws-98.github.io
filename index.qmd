@@ -1,0 +1,51 @@
+---
+title: ""
+page-layout: full
+---
+
+::: {.hero}
+::: {.hero-content}
+<span class="eyebrow">LANGUAGE · COGNITION · DISCOURSE</span>
+
+# Kamil Sikora
+
+## Doctoral Researcher in Linguistics
+
+*Exploring how language shapes cognition, ideology, and social reality.*
+
+I am a doctoral researcher at the University of Wrocław (since October 2026). I investigate political and legislative discourse through cognitive linguistics, corpus-assisted methods, and critical discourse analysis. I am also developing computational workflows for reproducible linguistic research.
+
+[Explore research](research.qmd){.btn .btn-primary} [Research notes](notes.qmd){.btn .btn-outline-primary} [GitHub](https://github.com/kws-98){.btn .btn-outline-primary}
+:::
+:::
+
+## Research at a glance
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-4 .research-card}
+### Cognitive Linguistics
+Conceptual metaphor, text worlds, mental models, and discourse interpretation.
+:::
+::: {.g-col-12 .g-col-md-4 .research-card}
+### Corpus-Assisted Studies
+Combining quantitative patterns with close qualitative analysis of institutional discourse.
+:::
+::: {.g-col-12 .g-col-md-4 .research-card}
+### Computational Methods
+Reproducible workflows for text preparation, exploration, and visualisation.
+:::
+:::
+
+## Featured research
+
+::: {.feature-card}
+<span class="eyebrow">RESEARCH PROJECT</span>
+
+### Constructing Threat and Obligation in British Legislative Discourse
+
+A corpus-assisted investigation of text worlds and mental models in parliamentary debates surrounding the Online Safety Act.
+
+`Political discourse` `Text World Theory` `Corpus linguistics`
+
+[Read about the project →](research/online-safety-act.qmd)
+:::
