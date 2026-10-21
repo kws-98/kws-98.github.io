@@ -1,0 +1,58 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Imię Nazwisko, MA"
+  description: "Doctoral Researcher in Linguistics | University of Wrocław"
+  site-url: "https://twoj-login.github.io"
+  
+  navbar:
+    background: light
+    search: true
+    left:
+      - text: "About"
+        href: index.qmd
+      - text: "Research"
+        href: research.qmd
+      - text: "Publications"
+        href: publications.qmd
+      - text: "Teaching"
+        href: teaching.qmd
+      - text: "Microblog"
+        href: notes.qmd
+    right:
+      - text: "🌐 Language"
+        menu:
+          - text: "🇬🇧 English"
+            href: index.qmd
+          - text: "🇵🇱 Polski"
+            href: pl/index.qmd
+          - text: "🇩🇪 Deutsch"
+            href: de/index.qmd
+      - icon: github
+        href: https://github.com/twoj-login
+      - icon: envelope
+        href: mailto:twoj.email@uwr.edu.pl
+
+  page-footer:
+    left: "© 2026 Imię Nazwisko. Powered by Quarto & GitHub Pages."
+    right:
+      - text: "ORCID"
+        href: "https://orcid.org/0000-0000-0000-0000"
+      - text: "Google Scholar"
+        href: "#"
+      - text: "ResearchGate"
+        href: "#"
+
+bibliography: references.bib
+csl: https://www.zotero.org/styles/apa
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    smooth-scroll: true
+    code-fold: show
+    code-tools: true
