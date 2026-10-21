@@ -1,0 +1,95 @@
+/* -- ZMIENNE KOLORYSTYCZNE -- */
+:root {
+  --academic-navy: #1e3a8a;
+  --academic-accent: #2563eb;
+  --card-radius: 12px;
+}
+
+/* -- TYPOGRAFIA AKADEMICKA -- */
+h1, h2, h3, .navbar-brand {
+  font-family: 'Merriweather', Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+h1.title {
+  font-weight: 700;
+  font-size: 2.1rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  border-bottom: 2px solid rgba(148, 163, 184, 0.25);
+  padding-bottom: 0.4rem;
+  margin-top: 2.2rem;
+  font-size: 1.45rem;
+}
+
+body {
+  line-height: 1.7;
+  font-size: 1.02rem;
+}
+
+/* -- PASEK NAWIGACJI -- */
+.navbar {
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+/* -- KARTY NA MIKROBLOGU (Quarto Listing) -- */
+.quarto-post {
+  border: 1px solid rgba(148, 163, 184, 0.25) !important;
+  border-radius: var(--card-radius);
+  padding: 1.25rem !important;
+  margin-bottom: 1rem !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.quarto-post:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.08);
+  border-color: var(--academic-accent) !important;
+}
+
+/* Tytuł wpisu na liście mikrobloga */
+.quarto-post .listing-title {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.35rem;
+}
+
+/* -- TAGI I KATEGORIE (PL / EN / DE oraz tematyczne) -- */
+.quarto-category, .listing-category {
+  border-radius: 9999px !important;
+  padding: 0.2em 0.75em !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: 0.02em;
+  transition: all 0.15s ease;
+}
+
+.listing-category:hover {
+  background-color: var(--academic-accent) !important;
+  color: #ffffff !important;
+}
+
+/* -- BLOKI KODU (Python / R) -- */
+div.sourceCode {
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+/* -- ZDJĘCIE PROFILOWE NA STRONIE GŁÓWNEJ -- */
+.about-image {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  border: 3px solid rgba(37, 99, 235, 0.15);
+}
