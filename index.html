@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imię Nazwisko | Academic Website</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                    colors: {
+                        academic: {
+                            50: '#f4f6f9',
+                            100: '#e2e8f0',
+                            700: '#1e3a8a',
+                            800: '#172554',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Ukrywanie nieaktywnych języków */
+        [data-lang] { display: none; }
+        html[lang="pl"] [data-lang="pl"] { display: revert; }
+        html[lang="en"] [data-lang="en"] { display: revert; }
+        html[lang="de"] [data-lang="de"] { display: revert; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-900 selection:text-white">
+
+    <!-- NAWIGACJA -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Imię i Nazwisko w pasku -->
+            <a href="#" class="font-serif font-bold text-lg text-slate-900 tracking-tight">
+                Imię Nazwisko, MA
+            </a>
+
+            <!-- Linki nawigacyjne (Desktop) -->
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-blue-900 transition">
+                    <span data-lang="pl">O mnie</span>
+                    <span data-lang="en">About</span>
+                    <span data-lang="de">Über mich</span>
+                </a>
+                <a href="#research" class="hover:text-blue-900 transition">
+                    <span data-lang="pl">Badania</span>
+                    <span data-lang="en">Research</span>
+                    <span data-lang="de">Forschung</span>
+                </a>
+                <a href="#publications" class="hover:text-blue-900 transition">
+                    <span data-lang="pl">Publikacje</span>
+                    <span data-lang="en">Publications</span>
+                    <span data-lang="de">Publikationen</span>
+                </a>
+                <a href="#education" class="hover:text-blue-900 transition">
+                    <span data-lang="pl">Edukacja</span>
+                    <span data-lang="en">Education</span>
+                    <span data-lang="de">Ausbildung</span>
+                </a>
+                <a href="#teaching" class="hover:text-blue-900 transition">
+                    <span data-lang="pl">Dydaktyka</span>
+                    <span data-lang="en">Teaching</span>
+                    <span data-lang="de">Lehre</span>
+                </a>
+                <a href="#contact" class="hover:text-blue-900 transition">
+                    <span data-lang="pl">Kontakt</span>
+                    <span data-lang="en">Contact</span>
+                    <span data-lang="de">Kontakt</span>
+                </a>
+            </nav>
+
+            <!-- Przełącznik języków -->
+            <div class="flex items-center space-x-1 bg-slate-100 p-1 rounded-lg border border-slate-200">
+                <button onclick="setLanguage('pl')" id="btn-pl" class="lang-btn px-2.5 py-1 text-xs font-semibold rounded-md transition">PL</button>
+                <button onclick="setLanguage('en')" id="btn-en" class="lang-btn px-2.5 py-1 text-xs font-semibold rounded-md transition">EN</button>
+                <button onclick="setLanguage('de')" id="btn-de" class="lang-btn px-2.5 py-1 text-xs font-semibold rounded-md transition">DE</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- GŁÓWNA ZAWARTOŚĆ -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+            <!-- LEWA KOLUMNA: Profil i linki (Sticky na dużych ekranach) -->
+            <aside class="lg:col-span-4">
+                <div class="lg:sticky lg:top-24 bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 text-center lg:text-left">
+                    <!-- Miejsce na zdjęcie (możesz podmienić src na plik np. "avatar.jpg") -->
+                    <div class="w-32 h-32 mx-auto lg:mx-0 rounded-full bg-slate-200 border-2 border-slate-300 flex items-center justify-center overflow-hidden mb-5">
+                        <i class="fa-solid fa-user-graduate text-4xl text-slate-400"></i>
+                        <!-- <img src="profile.jpg" alt="Imię Nazwisko" class="w-full h-full object-cover"> -->
+                    </div>
+
+                    <h1 class="font-serif text-2xl font-bold text-slate-900">Imię Nazwisko</h1>
+                    
+                    <p class="text-sm font-medium text-blue-900 mt-1">
+                        <span data-lang="pl">Doktorant w dyscyplinie Językoznawstwo</span>
+                        <span data-lang="en">Doctoral Researcher in Linguistics</span>
+                        <span data-lang="de">Doktorand der Sprachwissenschaft</span>
+                    </p>
+
+                    <p class="text-xs text-slate-500 mt-1">
+                        <span data-lang="pl">Kolegium Doktorskie Językoznawstwa<br>Uniwersytet Wrocławski</span>
+                        <span data-lang="en">Doctoral School of Linguistics<br>University of Wrocław</span>
+                        <span data-lang="de">Doktorandenkolleg für Sprachwissenschaft<br>Universität Breslau (Wrocław)</span>
+                    </p>
+
+                    <hr class="my-5 border-slate-200">
+
+                    <!-- Dane kontaktowe i linki akademickie -->
+                    <ul class="space-y-3 text-sm text-slate-600 text-left">
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-location-dot w-5 text-center text-slate-400"></i>
+                            <span>Wrocław, Poland</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-envelope w-5 text-center text-slate-400"></i>
+                            <a href="mailto:twoj.email@uwr.edu.pl" class="hover:text-blue-900 break-all">twoj.email@uwr.edu.pl</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-brands fa-orcid w-5 text-center text-[#A6CE39]"></i>
+                            <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" class="hover:text-blue-900">ORCID</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-graduation-cap w-5 text-center text-blue-600"></i>
+                            <a href="#" target="_blank" class="hover:text-blue-900">Google Scholar</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-brands fa-researchgate w-5 text-center text-[#00CCBB]"></i>
+                            <a href="#" target="_blank" class="hover:text-blue-900">ResearchGate</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-brands fa-github w-5 text-center text-slate-800"></i>
+                            <a href="https://github.com/twoj-login" target="_blank" class="hover:text-blue-900">GitHub</a>
+                        </li>
+                    </ul>
+
+                    <!-- Przycisk do pobrania CV -->
+                    <div class="mt-6">
+                        <a href="cv.pdf" target="_blank" class="block w-full py-2.5 px-4 bg-slate-900 hover:bg-blue-900 text-white text-center text-xs font-semibold uppercase tracking-wider rounded-lg transition shadow-sm">
+                            <i class="fa-solid fa-file-pdf mr-1.5"></i>
+                            <span data-lang="pl">Pobierz CV (PDF)</span>
+                            <span data-lang="en">Download CV (PDF)</span>
+                            <span data-lang="de">Lebenslauf (PDF)</span>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- PRAWA KOLUMNA: Treść merytoryczna -->
+            <div class="lg:col-span-8 space-y-14">
+
+                <!-- SEKCJA: O MNIE -->
+                <section id="about" class="scroll-mt-24">
+                    <h2 class="font-serif text-xl font-bold text-slate-900 border-b-2 border-slate-200 pb-2 mb-4">
+                        <span data-lang="pl">O mnie</span>
+                        <span data-lang="en">About Me</span>
+                        <span data-lang="de">Über mich</span>
+                    </h2>
+                    
+                    <div class="text-slate-700 leading-relaxed space-y-4 text-sm sm:text-base">
+                        <p data-lang="pl">
+                            Jestem doktorantem w Kolegium Doktorskim Językoznawstwa na Uniwersytecie Wrocławskim. Moje badania sytuują się na styku językoznawstwa kognitywnego, krytycznej analizy dyskursu (CDA) oraz lingwistyki korpusowej i komputerowej. Łączę jakościowe ramy teoretyczne z ilościowymi metodami przetwarzania języka naturalnego (NLP) oraz modelami językowymi opartymi na architekturze Transformer.
+                        </p>
+                        <p data-lang="en">
+                            I am a Doctoral Researcher in the Doctoral School of Linguistics at the University of Wrocław. My research lies at the intersection of cognitive linguistics, critical discourse analysis (CDA), and corpus and computational linguistics. I systematically integrate qualitative theoretical frameworks with quantitative natural language processing (NLP) pipelines and Transformer-based language models.
+                        </p>
+                        <p data-lang="de">
+                            Ich bin Doktorand am Doktorandenkolleg für Sprachwissenschaft der Universität Breslau (Uniwersytet Wrocławski). Meine Forschungsschwerpunkte liegen an der Schnittstelle von kognitiver Linguistik, kritischer Diskursanalyse (KDA) sowie Korpus- und Computerlinguistik. Dabei verbinde ich qualitative diskursanalytische Ansätze mit quantitativen Methoden der natürlichen Sprachverarbeitung (NLP) und Transformer-basierten Sprachmodellen.
+                        </p>
+                    </div>
+
+                    <!-- Zainteresowania badawcze (Pigułki) -->
+                    <div class="mt-6">
+                        <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">
+                            <span data-lang="pl">Zainteresowania badawcze</span>
+                            <span data-lang="en">Research Interests</span>
+                            <span data-lang="de">Forschungsschwerpunkte</span>
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-900 border border-blue-200 rounded-full text-xs font-medium">
+                                <span data-lang="pl">Kognitywna Krytyczna Analiza Dyskursu (CCDA)</span>
+                                <span data-lang="en">Cognitive Critical Discourse Analysis (CCDA)</span>
+                                <span data-lang="de">Kognitive Kritische Diskursanalyse (CCDA)</span>
+                            </span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-900 border border-blue-200 rounded-full text-xs font-medium">
+                                <span data-lang="pl">Badania nad dyskursem wspomagane korpusowo (CADS)</span>
+                                <span data-lang="en">Corpus-Assisted Discourse Studies (CADS)</span>
+                                <span data-lang="de">Korpusgestützte Diskursstudien (CADS)</span>
+                            </span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-900 border border-blue-200 rounded-full text-xs font-medium">
+                                <span data-lang="pl">Metafora pojęciowa, metonimia i ramowanie</span>
+                                <span data-lang="en">Conceptual Metaphor, Metonymy & Framing</span>
+                                <span data-lang="de">Konzeptuelle Metapher, Metonymie & Framing</span>
+                            </span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-900 border border-blue-200 rounded-full text-xs font-medium">
+                                <span data-lang="pl">Brytyjski dyskurs parlamentarny i polityczny</span>
+                                <span data-lang="en">British Parliamentary & Political Discourse</span>
+                                <span data-lang="de">Britischer Parlaments- und Politikdiskurs</span>
+                            </span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-900 border border-blue-200 rounded-full text-xs font-medium">
+                                <span data-lang="pl">Komputerowa detekcja metafor (NLP / BERT)</span>
+                                <span data-lang="en">Computational Metaphor Identification (NLP / BERT)</span>
+                                <span data-lang="de">Computergestützte Metaphernidentifikation (NLP / BERT)</span>
+                            </span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SEKCJA: BADANIA I STACK TECHNOLOGICZNY -->
+                <section id="research" class="scroll-mt-24">
+                    <h2 class="font-serif text-xl font-bold text-slate-900 border-b-2 border-slate-200 pb-2 mb-4">
+                        <span data-lang="pl">Projekt Doktorski i Metodologia</span>
+                        <span data-lang="en">Doctoral Project & Methodology</span>
+                        <span data-lang="de">Promotionsprojekt & Methodik</span>
+                    </h2>
+
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
+                        <div class="inline-block px-2.5 py-0.5 bg-amber-100 text-amber-800 text-xs font-semibold rounded">
+                            2026 – present
+                        </div>
+                        <h3 class="font-serif font-bold text-lg text-slate-900">
+                            <span data-lang="pl">Konceptualizacja, metafora, metonimia i ramowanie w brytyjskich debatach parlamentarnych wokół ustawy <em>Online Safety Act 2023</em></span>
+                            <span data-lang="en">Conceptualization, Metaphor, Metonymy, and Framing in British Parliamentary Debates Surrounding the <em>Online Safety Act 2023</em></span>
+                            <span data-lang="de">Konzeptualisierung, Metapher, Metonymie und Framing in den britischen Parlamentsdebatten zum <em>Online Safety Act 2023</em></span>
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            <span data-lang="pl">
+                                Projekt bada sposoby poznawczego konstruowania przestrzeni cyfrowej, zagrożeń internetowych, wolności słowa oraz regulacji państwowych w brytyjskim parlamencie. Metodologia łączy Kognitywną Krytyczną Analizę Dyskursu (CCDA) oraz Badania nad Dyskursem Wspomagane Korpusowo (CADS) z automatyczną ekstrakcją cech semantycznych i figuratywnych przy użyciu zaawansowanych modeli językowych.
+                            </span>
+                            <span data-lang="en">
+                                This project investigates the cognitive construction of digital spaces, online harms, freedom of expression, and state regulation in the UK Parliament. The methodology integrates Cognitive Critical Discourse Analysis (CCDA) and Corpus-Assisted Discourse Studies (CADS) with automated extraction of semantic and figurative features using fine-tuned transformer architectures.
+                            </span>
+                            <span data-lang="de">
+                                Das Projekt untersucht die kognitive Konstruktion des digitalen Raums, von Online-Risiken, Meinungsfreiheit und staatlicher Regulierung im britischen Parlament. Methodisch werden Kognitive Kritische Diskursanalyse (CCDA) und Korpusgestützte Diskursstudien (CADS) mit der automatisierten Extraktion semantischer und figurativer Merkmale durch Transformer-Sprachmodelle verknüpft.
+                            </span>
+                        </p>
+                    </div>
+
+                    <!-- Narzędzia i technologia -->
+                    <div class="mt-6 bg-slate-100 p-5 rounded-xl border border-slate-200">
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">
+                            <span data-lang="pl">Narzędzia badawcze i lingwistyka komputerowa</span>
+                            <span data-lang="en">Computational & Corpus Research Stack</span>
+                            <span data-lang="de">Computer- und Korpuslinguistischer Tech-Stack</span>
+                        </h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+                            <div>
+                                <span class="font-semibold text-slate-800 block mb-1">Programming & NLP:</span>
+                                <span class="text-slate-600">Python, R, spaCy, Hugging Face Transformers, PyMUSAS</span>
+                            </div>
+                            <div>
+                                <span class="font-semibold text-slate-800 block mb-1">Models & Alignment:</span>
+                                <span class="text-slate-600">BERT, FrameBERT, MelBERT, EmbodiedBERT, DeepMet, Bertalign</span>
+                            </div>
+                            <div>
+                                <span class="font-semibold text-slate-800 block mb-1">Corpus Infrastructure:</span>
+                                <span class="text-slate-600">Sketch Engine, AntConc, #LancsBox, CLARIN-PL</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SEKCJA: PUBLIKACJE I PRACE DYPLOMOWE -->
+                <section id="publications" class="scroll-mt-24">
+                    <h2 class="font-serif text-xl font-bold text-slate-900 border-b-2 border-slate-200 pb-2 mb-4">
+                        <span data-lang="pl">Publikacje i Prace Badawcze</span>
+                        <span data-lang="en">Publications & Theses</span>
+                        <span data-lang="de">Publikationen & Abschlussarbeiten</span>
+                    </h2>
+
+                    <div class="space-y-6">
+                        <!-- Artykuł naukowy -->
+                        <div>
+                            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
+                                <span data-lang="pl">Artykuły recenzowane</span>
+                                <span data-lang="en">Peer-Reviewed Articles</span>
+                                <span data-lang="de">Begutachtete Fachartikel</span>
+                            </h3>
+                            <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm text-sm">
+                                <p class="text-slate-800">
+                                    <strong>Nazwisko, I.</strong> (2026). <em>[Tytuł Twojego artykułu naukowego – wpisz tutaj]</em>. Nazwa Czasopisma, Tom(Numer), str–str. 
+                                    <a href="#" class="text-blue-700 hover:underline ml-1">[DOI / Link]</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Prace dyplomowe -->
+                        <div>
+                            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
+                                <span data-lang="pl">Rozprawy dyplomowe (z wyróżnieniem)</span>
+                                <span data-lang="en">Academic Theses (with Distinction)</span>
+                                <span data-lang="de">Abschlussarbeiten (mit Auszeichnung)</span>
+                            </h3>
+                            <div class="space-y-3">
+                                <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm text-sm">
+                                    <span class="text-xs font-semibold text-blue-800 bg-blue-50 px-2 py-0.5 rounded">MA Thesis | 2026</span>
+                                    <p class="font-semibold text-slate-900 mt-1">
+                                        <em>Thatcher in Polish: Translation of Political Conceptual Metaphors in The Downing Street Years</em>
+                                    </p>
+                                    <p class="text-xs text-slate-600 mt-1">
+                                        <span data-lang="pl">Analiza przekładu politycznych metafor pojęciowych z wykorzystaniem korpusów równoległych, Bertalign, FrameBERT, CADS oraz Critical Metaphor Analysis.</span>
+                                        <span data-lang="en">An investigation of political conceptual metaphor translation utilizing parallel corpora, Bertalign, FrameBERT, CADS, and Critical Metaphor Analysis.</span>
+                                        <span data-lang="de">Eine Untersuchung der Übersetzung politischer konzeptueller Metaphern unter Verwendung von Parallelkorpora, Bertalign, FrameBERT, CADS und Critical Metaphor Analysis.</span>
+                                    </p>
+                                </div>
+
+                                <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm text-sm">
+                                    <span class="text-xs font-semibold text-slate-700 bg-slate-100 px-2 py-0.5 rounded">BA Thesis | 2024</span>
+                                    <p class="font-semibold text-slate-900 mt-1">
+                                        <em>Westminster in Mourning – Feeling and Opinion in Condolence Debate after the Death of Elizabeth II</em>
+                                    </p>
+                                    <p class="text-xs text-slate-600 mt-1">
+                                        <span data-lang="pl">Badanie wartościowania, emocji i opinii w debacie kondolencyjnej na bazie autorskiego korpusu parlamentarnego (250 000 tokenów).</span>
+                                        <span data-lang="en">Corpus-based examination of affect, evaluation, and opinion in parliamentary condolence speeches based on a custom 250,000-token Hansard corpus.</span>
+                                        <span data-lang="de">Korpusbasierte Untersuchung von Emotionen und Bewertungen in parlamentarischen Kondolenzreden anhand eines 250.000 Token umfassenden Hansard-Korpus.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SEKCJA: EDUKACJA -->
+                <section id="education" class="scroll-mt-24">
+                    <h2 class="font-serif text-xl font-bold text-slate-900 border-b-2 border-slate-200 pb-2 mb-4">
+                        <span data-lang="pl">Wykształcenie</span>
+                        <span data-lang="en">Education</span>
+                        <span data-lang="de">Ausbildung</span>
+                    </h2>
+
+                    <div class="relative border-l-2 border-slate-200 ml-3 pl-6 space-y-6">
+                        <!-- Doktorat -->
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-blue-900 border-2 border-white"></div>
+                            <span class="text-xs font-semibold text-blue-900">2026 – present</span>
+                            <h3 class="font-bold text-slate-900 text-base">
+                                <span data-lang="pl">Szkoła Doktorska – Kolegium Doktorskie Językoznawstwa</span>
+                                <span data-lang="en">Doctoral School in Linguistics (PhD Programme)</span>
+                                <span data-lang="de">Doktorandenkolleg für Sprachwissenschaft (Promotionsstudium)</span>
+                            </h3>
+                            <p class="text-xs text-slate-500">Uniwersytet Wrocławski / University of Wrocław</p>
+                            <p class="text-xs text-slate-600 mt-1">
+                                <span data-lang="pl">1. miejsce na liście rankingowej w postępowaniu rekrutacyjnym.</span>
+                                <span data-lang="en">Ranked 1st overall in the doctoral entrance examination.</span>
+                                <span data-lang="de">1. Platz im Auswahlverfahren zur Aufnahme in das Doktorandenkolleg.</span>
+                            </p>
+                        </div>
+
+                        <!-- Magisterium -->
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-400 border-2 border-white"></div>
+                            <span class="text-xs font-semibold text-slate-500">2024 – 2026</span>
+                            <h3 class="font-bold text-slate-900 text-base">
+                                <span data-lang="pl">Magister Filologii Angielskiej (dyplom z wyróżnieniem)</span>
+                                <span data-lang="en">MA in English Philology (with Distinction)</span>
+                                <span data-lang="de">M.A. in Englischer Philologie (mit Auszeichnung)</span>
+                            </h3>
+                            <p class="text-xs text-slate-500">Uniwersytet Wrocławski / University of Wrocław</p>
+                        </div>
+
+                        <!-- Licencjat -->
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-400 border-2 border-white"></div>
+                            <span class="text-xs font-semibold text-slate-500">2021 – 2024</span>
+                            <h3 class="font-bold text-slate-900 text-base">
+                                <span data-lang="pl">Licencjat Filologii Angielskiej (dyplom z wyróżnieniem)</span>
+                                <span data-lang="en">BA in English Philology (with Distinction)</span>
+                                <span data-lang="de">B.A. in Englischer Philologie (mit Auszeichnung)</span>
+                            </h3>
+                            <p class="text-xs text-slate-500">Uniwersytet Wrocławski / University of Wrocław</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SEKCJA: DYDAKTYKA I JĘZYKI -->
+                <section id="teaching" class="scroll-mt-24">
+                    <h2 class="font-serif text-xl font-bold text-slate-900 border-b-2 border-slate-200 pb-2 mb-4">
+                        <span data-lang="pl">Dydaktyka i Języki</span>
+                        <span data-lang="en">Teaching & Languages</span>
+                        <span data-lang="de">Lehre & Sprachkenntnisse</span>
+                    </h2>
+
+                    <div class="text-sm text-slate-700 space-y-4">
+                        <p data-lang="pl">
+                            Od 2021 roku zajmuję się indywidualnym kształceniem językowym, specjalizując się w <strong>Academic English</strong> (pisanie tekstów naukowych, przygotowanie do wystąpień i obron) oraz <strong>Business English</strong> dla profesjonalistów.
+                        </p>
+                        <p data-lang="en">
+                            Since 2021, I have worked as an English language tutor and mentor, specializing in <strong>Academic English</strong> (scholarly writing, argumentation, and presentation skills) and <strong>Business English</strong> communication for professionals.
+                        </p>
+                        <p data-lang="de">
+                            Seit 2021 bin ich als Sprachtutor und Mentor tätig, mit Spezialisierung auf <strong>Academic English</strong> (wissenschaftliches Schreiben und Präsentieren) sowie <strong>Business English</strong> für Fach- und Führungskräfte.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                            <div class="bg-white p-3.5 rounded-lg border border-slate-200">
+                                <span class="text-xs text-slate-400 block">
+                                    <span data-lang="pl">Język polski</span><span data-lang="en">Polish</span><span data-lang="de">Polnisch</span>
+                                </span>
+                                <span class="font-semibold text-slate-800 text-sm">
+                                    <span data-lang="pl">Ojczysty</span><span data-lang="en">Native</span><span data-lang="de">Muttersprache</span>
+                                </span>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-lg border border-slate-200">
+                                <span class="text-xs text-slate-400 block">
+                                    <span data-lang="pl">Język angielski</span><span data-lang="en">English</span><span data-lang="de">Englisch</span>
+                                </span>
+                                <span class="font-semibold text-slate-800 text-sm">C2 (Proficiency)</span>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-lg border border-slate-200">
+                                <span class="text-xs text-slate-400 block">
+                                    <span data-lang="pl">Język niemiecki</span><span data-lang="en">German</span><span data-lang="de">Deutsch</span>
+                                </span>
+                                <span class="font-semibold text-slate-800 text-sm">B2 (Upper-Intermediate)</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SEKCJA: KONTAKT -->
+                <section id="contact" class="scroll-mt-24">
+                    <h2 class="font-serif text-xl font-bold text-slate-900 border-b-2 border-slate-200 pb-2 mb-4">
+                        <span data-lang="pl">Kontakt</span>
+                        <span data-lang="en">Contact</span>
+                        <span data-lang="de">Kontakt</span>
+                    </h2>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        <span data-lang="pl">Zapraszam do kontaktu w sprawie współpracy naukowej, projektów korpusowych, konferencji oraz konsultacji językowych: </span>
+                        <span data-lang="en">Feel free to reach out regarding academic collaboration, corpus linguistics projects, conferences, or language consultations: </span>
+                        <span data-lang="de">Für wissenschaftliche Kooperationen, korpuslinguistische Projekte, Konferenzen oder Sprachberatungen erreichen Sie mich unter: </span>
+                        <a href="mailto:twoj.email@uwr.edu.pl" class="font-semibold text-blue-900 hover:underline">twoj.email@uwr.edu.pl</a>.
+                    </p>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- STOPKA -->
+    <footer class="border-t border-slate-200 bg-white mt-16 py-8">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-400">
+            <p>&copy; <span id="year"></span> Imię Nazwisko. All rights reserved.</p>
+            <p class="mt-2 sm:mt-0">Hosted on GitHub Pages</p>
+        </div>
+    </footer>
+
+    <!-- SKRYPT PRZEŁĄCZANIA JĘZYKÓW -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function setLanguage(lang) {
+            // Zmień atrybut lang na znaczniku <html>
+            document.documentElement.setAttribute('lang', lang);
+            localStorage.setItem('preferred-academic-lang', lang);
+
+            // Aktualizacja wyglądu przycisków
+            ['pl', 'en', 'de'].forEach(l => {
+                const btn = document.getElementById('btn-' + l);
+                if (l === lang) {
+                    btn.className = 'lang-btn px-2.5 py-1 text-xs font-bold rounded-md bg-blue-900 text-white shadow-sm transition';
+                } else {
+                    btn.className = 'lang-btn px-2.5 py-1 text-xs font-semibold rounded-md text-slate-600 hover:text-slate-900 transition';
+                }
+            });
+        }
+
+        // Inicjalizacja języka przy starcie (domyślnie 'en', lub zapamiętany wybór)
+        const savedLang = localStorage.getItem('preferred-academic-lang') || 'en';
+        setLanguage(savedLang);
+    </script>
+</body>
+</html>
