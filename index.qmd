@@ -1,0 +1,44 @@
+---
+title: "Imię Nazwisko"
+subtitle: "Doctoral Researcher in Linguistics | University of Wrocław"
+image: profile.jpg # Wrzuć swoje zdjęcie pod tą nazwą do głównego folderu
+about:
+  template: trestles
+  image-shape: round
+  image-width: 14em
+  links:
+    - icon: envelope
+      text: Email
+      href: mailto:twoj.email@uwr.edu.pl
+    - icon: mortarboard-fill
+      text: Google Scholar
+      href: "#"
+    - icon: github
+      text: GitHub
+      href: https://github.com/twoj-login
+    - icon: file-earmark-pdf
+      text: CV (PDF)
+      href: cv.pdf
+toc: false
+---
+
+## About Me
+
+I am a Doctoral Researcher in the **Doctoral School of Linguistics (Kolegium Doktorskie Językoznawstwa)** at the University of Wrocław, having ranked 1st overall in the entrance examination for the 2026–2030 cohort. 
+
+My research integrates **Cognitive Critical Discourse Analysis (CCDA)** and **Corpus-Assisted Discourse Studies (CADS)** with quantitative natural language processing pipelines and Transformer-based models (`BERT`, `FrameBERT`, `MelBERT`, `EmbodiedBERT`). Currently, I investigate conceptualization, metaphor, metonymy, and framing in British parliamentary debates surrounding the *Online Safety Act 2023*.
+
+### Research Stack
+* **Languages & NLP:** Python, R, spaCy, Hugging Face Transformers, PyMUSAS
+* **Metaphor & Alignment Models:** FrameBERT, MelBERT, EmbodiedBERT, DeepMet, Bertalign
+* **Corpus Tools:** Sketch Engine, AntConc, #LancsBox, CLARIN-PL
+
+---
+
+### Education
+
+* **PhD in Linguistics** (2026 – present) | *University of Wrocław*
+* **MA in English Philology, with Distinction** (2024 – 2026) | *University of Wrocław*  
+  Thesis: *Thatcher in Polish: Translation of Political Conceptual Metaphors in The Downing Street Years*
+* **BA in English Philology, with Distinction** (2021 – 2024) | *University of Wrocław*  
+  Thesis: *Westminster in Mourning – Feeling and Opinion in Condolence Debate after the Death of Elizabeth II*
