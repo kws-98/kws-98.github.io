@@ -3,9 +3,9 @@ project:
   output-dir: _site
 
 website:
-  title: "Imię Nazwisko, MA"
+  title: "Kamil Sikora"
   description: "Doctoral Researcher in Linguistics | University of Wrocław"
-  site-url: "https://twoj-login.github.io"
+  site-url: "https://kws-98.github.io"
   
   navbar:
     background: light
