@@ -1,0 +1,23 @@
+---
+title: "Threat and Obligation in British Legislative Discourse"
+---
+
+**Status:** Research project / proposed doctoral research (update to reflect your current status).
+
+## Overview
+
+This project examines how British parliamentary debates surrounding the Online Safety Act construct competing representations of digital threats, regulatory obligations, privacy, and free expression.
+
+## Framework
+
+- Corpus-Assisted Discourse Studies (CADS)
+- Text World Theory (TWT)
+- Socio-Cognitive Critical Discourse Analysis
+
+## Research design
+
+Planned analysis includes keyword and collocation patterns, concordance-based examination of modality, and qualitative interpretation of world-building and world-switching.
+
+## Outputs
+
+Publications, conference presentations, and supporting materials will be listed here when available.

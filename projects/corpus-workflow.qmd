@@ -1,0 +1,19 @@
+---
+title: "Parliamentary Corpus Analysis Workflow"
+---
+
+**Status:** Planned — not yet a published software project.
+
+## Aim
+
+Document a reproducible pipeline for acquiring, cleaning, structuring, and analysing parliamentary debate transcripts.
+
+## Potential components
+
+- Corpus acquisition and metadata handling
+- Text cleaning and validation
+- Frequency and keyword analysis
+- Collocation and concordance exploration
+- Reproducible notebooks and visualisations
+
+When a repository is available, add a link here.

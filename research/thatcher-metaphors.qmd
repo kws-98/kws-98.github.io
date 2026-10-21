@@ -1,0 +1,11 @@
+---
+title: "Thatcher in Polish"
+---
+
+**MA thesis:** *Thatcher in Polish: Translation of Political Conceptual Metaphors in The Downing Street Years*.
+
+This study compares political conceptual metaphors in Margaret Thatcher's English-language memoir and its Polish translation, combining conceptual metaphor theory, corpus-assisted analysis, and translation studies.
+
+**Methods and tools:** corpus alignment, metaphor analysis, FrameBERT, Bertalign.
+
+> Add a public thesis link or abstract here only if you wish to make it available.
